@@ -1,0 +1,134 @@
+.security {
+  background-color: var(--secondary-color);
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.security-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.security-image {
+  background: white;
+  border-radius: 2rem;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.security-shield-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+}
+
+.shield-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--primary-light);
+  animation: pulse 3s infinite linear;
+}
+
+.ring-1 {
+  width: 100%;
+  height: 100%;
+  animation-delay: 0s;
+}
+
+.ring-2 {
+  width: 140%;
+  height: 140%;
+  opacity: 0.6;
+  border-color: rgba(11, 99, 246, 0.2);
+  animation-delay: 1s;
+}
+
+.ring-3 {
+  width: 180%;
+  height: 180%;
+  opacity: 0.3;
+  border-color: rgba(11, 99, 246, 0.1);
+  animation-delay: 2s;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(1.2); opacity: 0; }
+}
+
+.main-shield {
+  font-size: 5rem;
+  color: var(--primary-color);
+  z-index: 10;
+  filter: drop-shadow(0 10px 15px rgba(11, 99, 246, 0.4));
+}
+
+.security-desc {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.security-features {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.sec-feature {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.sec-icon {
+  background: var(--primary-light);
+  color: var(--primary-color);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.sec-text h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-bottom: 0.25rem;
+}
+
+.sec-text p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.mt-2 {
+  margin-top: 1rem;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+
+@media (max-width: 968px) {
+  .security-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .sec-feature {
+    text-align: left;
+  }
+}

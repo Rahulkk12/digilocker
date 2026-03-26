@@ -1,0 +1,22 @@
+.register-container {
+  width: 100%;
+  max-width: 600px; /* Wider card for two columns */
+  position: relative;
+  z-index: 10;
+}
+
+.register-form .form-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.register-form .half-width {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .register-form .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}

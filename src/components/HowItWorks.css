@@ -1,0 +1,109 @@
+.how-it-works {
+  background-color: var(--secondary-color);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.hiw-steps-container {
+  position: relative;
+  margin-top: 4rem;
+}
+
+.hiw-line {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary-light);
+  z-index: 1;
+  border-radius: 4px;
+}
+
+.hiw-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hiw-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.hiw-num-container {
+  width: 80px;
+  height: 80px;
+  background: var(--bg-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 10px var(--secondary-color), var(--shadow-md);
+  margin-bottom: 2rem;
+  position: relative;
+  transition: all var(--transition-normal);
+  border: 4px solid var(--primary-light);
+}
+
+.hiw-step:hover .hiw-num-container {
+  transform: scale(1.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 10px var(--secondary-color), 0 0 20px rgba(11, 99, 246, 0.4);
+}
+
+.hiw-num {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.hiw-content {
+  padding: 1.5rem;
+  width: 100%;
+  border-top: 4px solid var(--primary-color);
+  transition: all var(--transition-normal);
+}
+
+.hiw-step:hover .hiw-content {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hiw-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+}
+
+.hiw-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 968px) {
+  .hiw-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem 2rem;
+  }
+  .hiw-line {
+    display: none;
+  }
+  .hiw-num-container {
+    box-shadow: var(--shadow-md);
+  }
+}
+
+@media (max-width: 500px) {
+  .hiw-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
